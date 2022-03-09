@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!-- saved from url=(0028)http://localhost:8181/TapUs/ -->
+<html class="no-mobile no-touch" style="height: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>TAPUS.</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <meta name="author" content="Roman Kirichik">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="http://localhost:8181/TapUs/images/favicon.png">
+    <link rel="apple-touch-icon" href="http://localhost:8181/TapUs/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://localhost:8181/TapUs/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://localhost:8181/TapUs/images/apple-touch-icon-114x114.png">
+    <link href="./TAPUS._files/css2" rel="stylesheet">
+    <link rel="stylesheet" href="./TAPUS._files/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./TAPUS._files/bootstrap.min.css">
+    <link rel="stylesheet" href="./TAPUS._files/style.css">
+    <link rel="stylesheet" href="./TAPUS._files/style-responsive.css">
+    <link rel="stylesheet" href="./TAPUS._files/animate.min.css">
+    <link rel="stylesheet" href="./TAPUS._files/vertical-rhythm.min.css">
+    <link rel="stylesheet" href="./TAPUS._files/owl.carousel.css">
+    <link rel="stylesheet" href="./TAPUS._files/magnific-popup.css">
+
+    <link rel="stylesheet" href="./TAPUS._files/slideMain.css">
+    <link rel="stylesheet" href="./TAPUS._files/yours-tapus.css">
+
+<meta name="shimejiBrowserExtensionId" content="gohjpllcolmccldfdggmamodembldgpc" data-version="1.6.5"><style type="text/css">
+@charset "UTF-8";
+/*!
+ * jQuery contextMenu - Plugin for simple contextMenu handling
+ *
+ * Version: v2.5.0
+ *
+ * Authors: Björn Brala (SWIS.nl), Rodney Rehm, Addy Osmani (patches for FF)
+ * Web: http://swisnl.github.io/jQuery-contextMenu/
+ *
+ * Copyright (c) 2011-2017 SWIS BV and contributors
+ *
+ * Licensed under
+ *   MIT License http://www.opensource.org/licenses/mit-license
+ *
+ * Date: 2017-05-25T11:30:28.663Z
+ */
+@-webkit-keyframes cm-spin {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(359deg);
+            transform: translateY(-50%) rotate(359deg);
+  }
+}
+@-o-keyframes cm-spin {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+         -o-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(359deg);
+         -o-transform: translateY(-50%) rotate(359deg);
+            transform: translateY(-50%) rotate(359deg);
+  }
+}
+@keyframes cm-spin {
+  0% {
+    -webkit-transform: translateY(-50%) rotate(0deg);
+         -o-transform: translateY(-50%) rotate(0deg);
+            transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-50%) rotate(359deg);
+         -o-transform: translateY(-50%) rotate(359deg);
+            transform: translateY(-50%) rotate(359deg);
+  }
+}
+
+@font-face {
+  font-family: "context-menu-icons";
+  font-style: normal;
+  font-weight: normal;
+
+  src: url("font/context-menu-icons.eot?4yg1f");
+  src: url("font/context-menu-icons.eot?4yg1f#iefix") format("embedded-opentype"), url("font/context-menu-icons.woff2?4yg1f") format("woff2"), url("font/context-menu-icons.woff?4yg1f") format("woff"), url("font/context-menu-icons.ttf?4yg1f") format("truetype");
+}
+
+.context-menu-icon-add:before {
+  content: "EA01";
+}
+
+.context-menu-icon-copy:before {
+  content: "EA02";
+}
+
+.context-menu-icon-cut:before {
+  content: "EA03";
+}
+
+.context-menu-icon-delete:before {
+  content: "EA04";
+}
+
+.context-menu-icon-edit:before {
+  content: "EA05";
+}
+
+.context-menu-icon-loading:before {
+  content: "EA06";
+}
+
+.context-menu-icon-paste:before {
+  content: "EA07";
+}
+
+.context-menu-icon-quit:before {
+  content: "EA08";
+}
+
+.context-menu-icon::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2em;
+  font-family: "context-menu-icons";
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  color: #2980b9;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.context-menu-icon.context-menu-hover:before {
+  color: #fff;
+}
+
+.context-menu-icon.context-menu-disabled::before {
+  color: #bbb;
+}
+
+.context-menu-icon.context-menu-icon-loading:before {
+  -webkit-animation: cm-spin 2s infinite;
+       -o-animation: cm-spin 2s infinite;
+          animation: cm-spin 2s infinite;
+}
+
+.context-menu-icon.context-menu-icon--fa {
+  display: list-item;
+  font-family: inherit;
+}
+.context-menu-icon.context-menu-icon--fa::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 2em;
+  font-family: FontAwesome;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  color: #2980b9;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.context-menu-icon.context-menu-icon--fa.context-menu-hover:before {
+  color: #fff;
+}
+.context-menu-icon.context-menu-icon--fa.context-menu-disabled::before {
+  color: #bbb;
+}
+
+.context-menu-list {
+  position: absolute;
+  display: inline-block;
+  min-width: 13em;
+  max-width: 26em;
+  padding: .25em 0;
+  margin: .3em;
+  font-family: inherit;
+  font-size: inherit;
+  list-style-type: none;
+  background: #fff;
+  border: 1px solid #bebebe;
+  border-radius: .2em;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.context-menu-item {
+  position: relative;
+  padding: .2em 2em;
+  color: #2f2f2f;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: #fff;
+}
+
+.context-menu-separator {
+  padding: 0;
+  margin: .35em 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.context-menu-item > label > input,
+.context-menu-item > label > textarea {
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+
+.context-menu-item.context-menu-hover {
+  color: #fff;
+  cursor: pointer;
+  background-color: #2980b9;
+}
+
+.context-menu-item.context-menu-disabled {
+  color: #bbb;
+  cursor: default;
+  background-color: #fff;
+}
+
+.context-menu-input.context-menu-hover {
+  color: #2f2f2f;
+  cursor: default;
+}
+
+.context-menu-submenu:after {
+  position: absolute;
+  top: 50%;
+  right: .5em;
+  z-index: 1;
+  width: 0;
+  height: 0;
+  content: '';
+  border-color: transparent transparent transparent #2f2f2f;
+  border-style: solid;
+  border-width: .25em 0 .25em .25em;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+       -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/**
+ * Inputs
+ */
+.context-menu-item.context-menu-input {
+  padding: .3em .6em;
+}
+
+/* vertically align inside labels */
+.context-menu-input > label > * {
+  vertical-align: top;
+}
+
+/* position checkboxes and radios as icons */
+.context-menu-input > label > input[type="checkbox"],
+.context-menu-input > label > input[type="radio"] {
+  position: relative;
+  top: .12em;
+  margin-right: .4em;
+}
+
+.context-menu-input > label {
+  margin: 0;
+}
+
+.context-menu-input > label,
+.context-menu-input > label > input[type="text"],
+.context-menu-input > label > textarea,
+.context-menu-input > label > select {
+  display: block;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.context-menu-input > label > textarea {
+  height: 7em;
+}
+
+.context-menu-item > .context-menu-list {
+  top: .3em;
+  /* re-positioned by js */
+  right: -.3em;
+  display: none;
+}
+
+.context-menu-item.context-menu-visible > .context-menu-list {
+  display: block;
+}
+
+.context-menu-accesskey {
+  text-decoration: underline;
+}
+</style><style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.context-menu-list {
+  font-family: 'Lato', sans-serif !important;
+  font-size: 14px;
+  text-align: left;
+  font-weight: normal;
+  width: 200px;
+}
+.context-menu-item {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+.contextmenu-item-custom.contextmenu-item-custom__accent:not(:hover) {
+  background-color: #f8ffeb;
+}
+.contextmenu-item-custom.contextmenu-item-custom__success:not(:hover) {
+  background-color: #eeffcd;
+}
+</style><script type="text/javascript" charset="UTF-8" src="./TAPUS._files/common.js.download"></script><script type="text/javascript" charset="UTF-8" src="./TAPUS._files/util.js.download"></script></head>
+
+<body class="appear-animate">
+
+    <!-- Page Loader -->
+    <div class="page-loader" style="display: none;">
+        <div class="loader" style="display: none;">Loading...</div>
+    </div>
+    <!-- End Page Loader -->
+
+    <!-- Page Wrap -->
+    <div class="page" id="top">
+
+        <!-- Home Section -->
+        <!-- images/full-width-images/banner-1.png -->
+        <section class="home-section bg-dark-alfa-30 parallax-2" data-background="" id="home" style="background-position: 50% 0px;">
+            <div class="slider">
+                <div class="slide slide1 active" style="display: block;"></div>
+                <div class="slide slide2" style="display: none;"></div>
+                <div class="slide slide3" style="display: none;"></div>
+            </div>
+            <div class="js-height-full" style="height: 431px;">
+                <div class="black"></div>
+                <!-- Hero Content -->
+                <div class="home-content">
+                    <div class="home-text">
+                        <img src="./TAPUS._files/logo.png" alt="logo" class="mt-230" width="400px">
+                        <br>
+                        <h1 class="hs-line-11 mb-20 mb-xs-10 mt-220 mt-sm-0 taptap">
+                            TAP TO A NEW WORLD
+                        </h1>
+                        <div class="hs-line-3 mb-100 mb-xs-30">
+                            Gắn kết xã hội qua TAPUS
+                        </div>
+                    </div>
+                </div>
+                <!-- End Hero Content -->
+                <!-- Scroll Down -->
+                <div class="local-scroll">
+                    <a href="http://localhost:8181/TapUs/#about" class="scroll-down"><i class="fa fa-angle-down scroll-down-icon"></i></a>
+                </div>
+                <!-- End Scroll Down -->
+            </div>
+        </section>
+        <!-- End Home Section -->
+        <!-- Navigation panel -->
+        <nav class="main-nav dark stick-fixed js-transparent transparent">
+            <div class="full-wrapper relative clearfix">
+                <!-- Logo ( * your text or image into link tag *) -->
+                <div class="nav-logo-wrap local-scroll">
+                    <i class=" fas fa-bars" style="
+    height: 100%\;
+    height: 10;
+    height: 100%;
+"></i>
+                </div>
+                <div class="mobile-nav" style="height: 75px; line-height: 75px; width: 75px;">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <!-- Main Menu -->
+                <div class="inner-nav desktop-nav">
+                    <ul class="clearlist scroll-nav local-scroll">
+                        <li>
+                            <a href="http://localhost:8181/TapUs/login.php" class="hs-line-3 mt-200 mb-xs-10" style="height: 75px; line-height: 75px;">ĐĂNG NHẬP</a>                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End Navigation panel -->
+
+<section class="page-section" id="about">
+    <div class="container relative">
+        <div class="sec2-hang">
+            <img src="./TAPUS._files/section2-1.png" alt="" class="section2-img">
+            <div class="sec2-text">
+                <h1>TAPUS TẠO RA SỰ KẾT NỐI</h1>
+                <h2>Tất cả vấn đề của sự kết nối chính là thời gian. Trong cuộc sống hối hả, bộn bề
+                    nhiều lo toan, con người không có nhiều thời gian để tạo ra sự kết nối với nhau.
+                    TAPUS ra đời với sứ mệnh tạo ra một thế giới kết nối mà không bị thời gian làm ảnh
+                    hưởng.</h2>
+            </div>
+
+        </div>
+        <div class="sec2-hang">
+            <img src="./TAPUS._files/section2-2.png" alt="" class="section2-img">
+            <div class="sec2-text">
+                <h1>CHỈ MẤT 1 GIÂY ĐỂ CHIA SẺ</h1>
+                <h2>Chỉ với một cú chạm từ điện thoại. Mọi thông tin cá nhân, trang mạng xã hội hay
+                    thậm chí là những bức ảnh của bạn đều sẽ được chia sẻ với người đối diện. Tất cả
+                    thao tác chỉ vỏn vẹn trong vòng 1 giây.</h2>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+
+<hr class="mt-0 mb-0 ">
+<!-- About Section -->
+<section class="page-section">
+    <div class="container relative">
+        <div class="hang">
+            <h2 class="tuongthich align-left">
+                TƯƠNG THÍCH VỚI HỆ ĐIỀU HÀNH IOS &amp; ANDROID
+            </h2>
+            <img src="./TAPUS._files/tuongthich-box1.png" alt="" class="box-item1">
+            <img src="./TAPUS._files/tuongthich-box2.png" alt="" class="box-item1">
+
+
+
+        </div>
+
+
+    </div>
+</section>
+<!-- End About Section -->
+
+<!-- Divider -->
+<hr class="mt-0 mb-0 ">
+<!-- End Divider -->
+
+<!-- Services Section -->
+<section class="page-section" id="services">
+
+
+    <h2 class="products-title">
+        NHỮNG SẢN PHẨM CỦA TAPUS
+    </h2>
+    <div class="group-sanpham">
+        <div class="khung-sanpham"><img src="./TAPUS._files/sanpham1.png" alt="" id="sanpham1"><div class="sanpham"><h1>TAPUS PVC CARD</h1><h4>Danh thiếp điện tử TAPUS cá nhân hóa tùy chỉnh thông tin</h4><h5>Giá: 1000 VNĐ</h5></div><a href="http://localhost:8181/TapUs/sanphamTapUs.php?id=1" class="btnDetail" id="btnD1">Chi tiết</a></div><div class="khung-sanpham"><img src="./TAPUS._files/sanpham2.png" alt="" id="sanpham2"><div class="sanpham"><h1>YOUR TAPUS</h1><h4>Danh thiếp điện tử TAPUS cá nhân hóa tùy chỉnh thiết kế và thông tin</h4><h5>Giá: 0 VNĐ</h5></div><a href="http://localhost:8181/TapUs/sanphamTapUs.php?id=2" class="btnDetail" id="btnD2">Chi tiết</a></div><div class="khung-sanpham"><img src="./TAPUS._files/sanpham3.png" alt="" id="sanpham3"><div class="sanpham"><h1>STICKUS</h1><h4>Danh thiếp điện tử TAPUS dạng sticker nhỏ gọn và thuận tiện</h4><h5>Giá: 0 VNĐ</h5></div><a href="http://localhost:8181/TapUs/sanphamTapUs.php?id=3" class="btnDetail" id="btnD3">Chi tiết</a></div>    </div>
+
+</section>
+<!-- End Services Section -->
+
+<!-- Foter -->
+<footer class="page-section bg-gray-lighter footer pb-60">
+                <div class="row footer-main">
+                    <div class="col-4 col-md-4 text-contact">
+                        <h4>THEO DÕI CHÚNG TÔI</h4>
+                        <a href="http://localhost:8181/TapUs/#"><img src="./TAPUS._files/facebook.png" alt=""></a>
+                        <a href="http://localhost:8181/TapUs/#"><img src="./TAPUS._files/pngwing.com (1).png" alt=""></a>
+                        <a href="http://localhost:8181/TapUs/#"><img src="./TAPUS._files/icons8-zalo-100 (1).png" alt=""></a>
+                    </div>
+
+                    <div class="col-4 col-md-4 text-contact">
+                        <h4>THÔNG TIN LIÊN HỆ</h4>
+                        <p>
+                            Địa chỉ:<br>
+                            Hà Nội: Tầng 8, 81 Hoàng Ngân, Quận Thanh Xuân, Hà Nội <br>
+                            Hồ Chí Minh: Số 173/22, Đường số 20, Phường 5, Quận Gò Vấp, Hồ Chí Minh<br>
+                            Email: marketing@homiezmultimedia.com<br>
+                            Hotline: 0903202068
+                        </p>
+                    </div>
+                    <div class="col-4 col-md-4 text-contact">
+                       <ul>
+                           <li><a href="http://localhost:8181/TapUs/#">Trang chủ</a></li>
+                           <li><a href="http://localhost:8181/TapUs/#">Về chúng tôi</a></li>
+                           <li><a href="http://localhost:8181/TapUs/sanpham.php">Sản phẩm</a></li>
+                           <li><a href="http://localhost:8181/TapUs/#">Hướng dẫn sử dụng</a></li>
+                           <li><a href="http://localhost:8181/TapUs/#">Đăng kí liên hệ</a></li>
+                           <li><a href="http://localhost:8181/TapUs/#">Điều khoản dịch vụ và chính sách bảo mật</a></li>
+                       </ul>
+                    </div>
+                   
+                </div>
+                <div class="footer-content text-align-center ">2021 TAPUS</div>
+                 
+                 <!-- Top Link -->
+                 <div class="local-scroll">
+                     <a href="http://localhost:8181/TapUs/#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+                 </div>
+                 <!-- End Top Link -->
+                 
+            </footer>
+            <!-- End Foter -->
+        
+        
+        </div>
+        <!-- End Page Wrap -->
+        
+        
+        <!-- JS -->
+        <div class="fit-vids-style" id="fit-vids-style" style="display: none;">­<style>.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></div><script type="text/javascript" src="./TAPUS._files/jquery-1.11.1.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.easing.1.3.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/bootstrap.min.js.download"></script>        
+        <script type="text/javascript" src="./TAPUS._files/SmoothScroll.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.scrollTo.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.localScroll.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.viewport.mini.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.countTo.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.appear.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.sticky.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.parallax-1.1.3.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.fitvids.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/owl.carousel.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/isotope.pkgd.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/imagesloaded.pkgd.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.magnific-popup.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/js"></script>
+        <script type="text/javascript" src="./TAPUS._files/gmap3.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/wow.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/masonry.pkgd.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/jquery.simple-text-rotator.min.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/all.js.download"></script>
+        <script type="text/javascript" src="./TAPUS._files/contact-form.js.download"></script>      
+
+        <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
+        <script src="./TAPUS._files/slideMain.js.download"></script>
+        
+    
+
+<div id="shimai-world" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 2147483647; pointer-events: none; background: transparent;"></div></body></html>

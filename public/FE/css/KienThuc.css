@@ -1,0 +1,122 @@
+@media (min-width: 1600px) {}
+
+@media (min-width: 1200px) and (max-width:1599.99px) {
+    html, body {
+        font-size: 16px;
+    }
+    .news-left-item-img {
+        height: 12rem;
+        padding: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    html, body {
+        font-size: 15px !important;
+    }
+    .news-left-item-img {
+        height: 12rem;
+        padding: 0;
+    }
+    .news-right-item-img {
+        height: 4.5rem;
+    }
+    .news-right-item{
+        padding: 0 1rem !important;
+        margin: .5rem 0 !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html, body {
+        font-size: 13px;
+    }
+    .news-left-item-img {
+        height: 12rem;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    html, body {
+        font-size: 12px;
+
+    }
+    .row {
+        width: 100%;
+        margin: 0;
+    }
+    .news-left-item{
+        padding: 0;
+    }
+    .news-left-item-img{
+        margin-right: 0;
+        padding: 0;
+        height: 8rem;
+    }
+    .news-left-item-info{
+        padding: 0 0 0 1rem;
+    }
+    .news-left-item-info p{
+        font-size: 5px;
+    }
+    .view{
+        margin-left: 2rem;
+    }
+}
+
+@media (min-width: 414px) and (max-width: 575.98px) {
+    html, body {
+        font-size: 11px;
+    }
+    .row {
+        width: 100%;
+        margin: 0;
+    }
+    .news-left-item{
+        padding: 0;
+    }
+    .news-left-item-img{
+        margin-right: 0;
+        padding: 0;
+        height: 8rem;
+    }
+    .news-left-item-info{
+        padding: 0 0 0 1rem;
+    }
+    .news-left-item-info p{
+        font-size: 5px;
+    }
+    .view{
+        margin-left: 2rem;
+    }
+}
+
+@media (max-width: 413.99px) {
+    html, body {
+        font-size: 10px !important;
+    }
+    .row {
+        width: 100%;
+        margin: 0;
+    }
+    .news-left-item{
+        padding: 0;
+    }
+    .news-left-item-img{
+        margin-right: 0;
+        padding: 0;
+        height: 8rem;
+    }
+    .news-left-item-info{
+        padding: 0 0 0 1rem;
+    }
+    .news-left-item-info p{
+        font-size: 5px;
+    }
+    .view{
+        margin-left: 2rem;
+    }
+}

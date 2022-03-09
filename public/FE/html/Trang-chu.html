@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - LTC</title>
+    <link rel="stylesheet" href="../css/--root.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href='../libs/fullcalendar-5.9.0/lib/main.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/Trang-chu.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <script src='../libs/fullcalendar-5.9.0/lib/main.js'></script>
+
+    <style>
+        #calendar {
+            color: #000;
+        }
+
+        #calendar .fc-toolbar-title {
+            color: #000;
+        }
+
+        .fc-toolbar {
+            text-transform: uppercase;
+        }
+
+        .fc-event {
+            border: transparent;
+            /* default BORDER color */
+            background-color: transparent;
+            /* default BACKGROUND color */
+            /* color: #fff; */
+            /* default TEXT color */
+            font-size: 3em;
+            text-align: center;
+            /* EDIT HERE */
+            cursor: default;
+        }
+
+        .fc .fc-daygrid-day-top {
+            flex-direction: unset !important;
+            margin: 0.3rem 0 0 0.3rem;
+        }
+
+        .fc .fc-day-today {
+            background-color: unset !important;
+        }
+
+        .fc .fc-day-today .fc-daygrid-day-number {
+            background-color: #FFED8D;
+            border-radius: 50%;
+        }
+
+        .fc .fc-daygrid-day-number {
+            width: 2rem;
+            height: 2rem;
+            text-align: center;
+            font-size: 1.3rem;
+            padding: 0;
+        }
+
+        .fc .fc-toolbar.fc-header-toolbar {
+            background-color: var(--primaryColor);
+            margin: 0;
+            padding: 1rem 0;
+        }
+
+        .fc .fc-toolbar.fc-header-toolbar h2 {
+            font-size: 2.3rem;
+            font-weight: 700;
+        }
+
+        .fc-theme-standard td {
+            border: 2px solid #000 !important;
+        }
+
+        .fc-theme-standard th {
+            border-right: 2px solid #000 !important;
+        }
+
+        .fc-event-title.fc-sticky {
+            font-size: var(--px50);
+            font-weight: 500;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="w-100">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-between align-items-center h-100">
+                <div class="mb-menu-icon">
+                    <svg style="color: #fff;" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </div>
+                <div class="logo">
+                    <a href="Trang-chu.html">
+                        <img src="../images/Artboard 2 copy.png" alt="" style="width: 100%;">
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul class="d-flex justify-content-between align-items-center">
+                        <li><a href="Ve-LTC.html">Về LTC</a></li>
+                        <li><a href="Tin-tuc.html">Tin tức</a></li>
+                        <li><a href="Noi-bat.html">Nổi bật</a></li>
+                        <li><a href="Kien-thuc.html">Kiến thức</a></li>
+                        <li><a href="OTC.html">OTC</a></li>
+                    </ul>
+                </nav>
+                <div class="search ">
+                    <div class="search-icon">
+                        <img src="../images/search.png" alt="">
+                    </div>
+                    <input type="text" placeholder="Tìm kiếm" class="search-input">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="main">
+            <div class="container">
+                <div class="new-post w-100">
+                    <div class="title bg ">
+                        <p>Bài viết mới</p>
+                    </div>
+                    <div class="row new-post-main">
+                        <div class="new-post-main-left col-xl-8 col-lg-8 col-md-12 col-12 h-100 " style="padding-right: 2.5rem;">
+                            <div class="new-post-left w-100 news-same">
+                                <div class="new-post-left_img news-same-img">
+                                    <a href="#"><img src="../images/coin.jpg" alt="" style="width: 100%;"></a>
+                                </div>
+                                <div class="new-post-left_info w-100 news-same-info">
+                                    <a href="#">Quỹ ETF Bitcoin đầu tiên tại Mỹ sẽ niêm yết. Sàn chứng khoán New
+                                        York</a>
+                                    <span></span>
+                                    <div class="icon  d-flex align-items-center news-same-icon mt-3"
+                                        style="width: 1.2rem;">
+                                        <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                        <span>00/00/2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-post-main-right col-xl-4 col-lg-4 col-md-12 col-12 h-100 pl-0">
+                            <div class=" new-post-right ">
+                                <div class=" d-flex justify-content-between flex-column h-100 w-100">
+                                    <div class="col-12 new-post-right_item d-flex pt-0">
+                                        <div class=" col-6 new-post-right_item__img">
+                                            <a href="#">
+                                                <img src="../images/coin.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class=" col-6 new-post-right_item__info pr-0">
+                                            <a href="#">Kyros Kompass #5: Bitcoin và DeFi -"Cú hích" nào cho cả 2?</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 new-post-right_item d-flex">
+                                        <div class="col-6 new-post-right_item__img ">
+                                            <a href="#">
+                                                <img src="../images/coin.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-6 new-post-right_item__info pr-0">
+                                            <a href="#">Những dự án nào có khả năng chiến thắng đấu giá parachain cua
+                                                Polkadot?
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 new-post-right_item d-flex">
+                                        <div class="col-6 new-post-right_item__img ">
+                                            <a href="#">
+                                                <img src="../images/coin.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-6 new-post-right_item__info pr-0">
+                                            <a href="#">Đánh giá dự án SuperRare (RARE coin)-Thông tin và update mới
+                                                nhất án
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" calendar w-100">
+                    <div class=" title bg ">
+                        <p>Lợi nhuận của LTC</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="calendar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" posts">
+                <div class="container">
+                    <div class=" title bg ">
+                        <p>Bài viết nổi bật</p>
+                    </div>
+                </div>
+                <div class="container-fluid  post-main">
+                    <div id="carouselExampleControls" class="carousel slide container" data-ride="carousel">
+                        <div class="carousel-inner inner-pc">
+                            <div class="carousel-item active ">
+                                <div class="row  slider justify-content-between">
+                                    <div class="col-4 slider-item d-flex justify-content-between flex-column ">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">So sánh Fiahub và Remitano</a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 slider-item d-flex justify-content-between flex-column">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">Cùng CoinEx tìm hiểu về các giải pháp an toàn trong thị trường
+                                                tiền điện
+                                                tử
+                                            </a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 slider-item d-flex justify-content-between flex-column">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">Ai sẽ là những khách hàng tiềm năng của NFT?</a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item  ">
+                                <div class="row slider justify-content-between">
+                                    <div class="col-4 slider-item d-flex justify-content-between flex-column ">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">So sánh Fiahub và Remitano</a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2022</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 slider-item d-flex justify-content-between flex-column">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">Cùng CoinEx tìm hiểu về các giải pháp an toàn trong thị trường
+                                                tiền điện
+                                                tử
+                                            </a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2022</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 slider-item d-flex justify-content-between flex-column">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">Ai sẽ là những khách hàng tiềm năng của NFT?</a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2022</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-inner inner-mb">
+                            <div class="carousel-item active ">
+                                <div class="row  slider justify-content-between">
+                                    <div class="col-6 slider-item d-flex justify-content-between flex-column ">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">So sánh Fiahub và Remitano</a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 slider-item d-flex justify-content-between flex-column">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">Cùng CoinEx tìm hiểu về các giải pháp an toàn trong thị trường
+                                                tiền điện
+                                                tử
+                                            </a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item  ">
+                                <div class="row  slider justify-content-between">
+                                    <div class="col-6 slider-item d-flex justify-content-between flex-column ">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">So sánh Fiahub và Remitano</a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 slider-item d-flex justify-content-between flex-column">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">Cùng CoinEx tìm hiểu về các giải pháp an toàn trong thị trường
+                                                tiền điện
+                                                tử
+                                            </a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item  ">
+                                <div class="row  slider justify-content-between">
+                                    <div class="col-6 slider-item d-flex justify-content-between flex-column ">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">So sánh Fiahub và Remitano</a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 slider-item d-flex justify-content-between flex-column">
+                                        <div class="slider-item-info">
+                                            <div class="slider-item-img">
+                                                <a href="#">
+                                                    <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                                </a>
+                                            </div>
+                                            <a href="#">Cùng CoinEx tìm hiểu về các giải pháp an toàn trong thị trường
+                                                tiền điện
+                                                tử
+                                            </a>
+                                        </div>
+                                        <div class="icon  d-flex align-items-center" style="width: 1.2rem;">
+                                            <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                            <span>00/00/2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="news">
+                <div class="container">
+                    <div class=" title bg m-t-4">
+                        <p>Tin tức </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-12 ">
+                            <div class=" title  bd-1 mb-4">
+                                <p>Crypto </p>
+                            </div>
+                            <div class="row news-item">
+                                <div class="col-4 news-item-img">
+                                    <a href="#">
+                                        <img src="../images/coin.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-8 news-item-info">
+                                    <a href="#">Mech Master (MECH) - game mecha chiến lược đầu tiên trên blockchain
+                                        ...</a>
+                                    <p>Mech Master là trò chơi blockchain 3D Mecha đầu tiên trên thế giới</p>
+                                </div>
+                            </div>
+                            <div class="row news-item">
+                                <div class="col-4 news-item-img">
+                                    <a href="#">
+                                        <img src="../images/coin.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-8 news-item-info">
+                                    <a href="#">Binance tiếp tục lập kỉ lục với lần đốt BNB thứ 17</a>
+                                    <p>Sự kiện đốt coin thứ 17 của Binance đã chứng kiến lượng 1.335.888 BNB, trị giá
+                                        hơn 639 triệu USD, bị thiêu hủy.</p>
+                                </div>
+                            </div>
+                            <div class="row news-item">
+                                <div class="col-4 news-item-img">
+                                    <a href="#">
+                                        <img src="../images/coin.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-8 news-item-info">
+                                    <a href="#">Nền tảng giao dịch SnapEx chính thức hoạt động trở lại , giảm 90% phí
+                                        ...</a>
+                                    <p>SnapEx là nền tảng giao dịch hợp đồng mã hóa đang phát triển nhanh
+                                        chóng</p>
+                                </div>
+                            </div>
+                            <div class="row news-item">
+                                <div class="col-4 news-item-img">
+                                    <a href="#">
+                                        <img src="../images/coin.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-8 news-item-info">
+                                    <a href="#">Ancient8 khởi tranh giải đấu Axie Infility VN Championship với tổng giải
+                                        ...</a>
+                                    <p>Ancient8 tự hào là đơn vị tổ chức giải đấu Axie Infility VN
+                                        Championship</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-12 ">
+                            <div class=" title  bd-1 mb-4">
+                                <p>Đội nhóm LTC </p>
+                            </div>
+                            <div class="row news-item">
+                                <div class="col-4 news-item-img">
+                                    <a href="#">
+                                        <img src="../images/coin.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-8 news-item-info">
+                                    <a href="#">Tiêu đề</a>
+                                    <p>Mech Master là trò chơi blockchain 3D Mecha đầu tiên trên thế giới</p>
+                                </div>
+                            </div>
+                            <div class="row news-item">
+                                <div class="col-4 news-item-img">
+                                    <a href="#">
+                                        <img src="../images/coin.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-8 news-item-info">
+                                    <a href="#">Tiêu đề</a>
+                                    <p>Sự kiện đốt coin thứ 17 của Binance đã chứng kiến lượng 1.335.888 BNB, trị giá
+                                        hơn 639 triệu USD, bị thiêu hủy.</p>
+                                </div>
+                            </div>
+                            <div class="row news-item">
+                                <div class="col-4 news-item-img">
+                                    <a href="#">
+                                        <img src="../images/coin.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-8 news-item-info">
+                                    <a href="#">Tiêu đề</a>
+                                    <p>SnapEx là nền tảng giao dịch hợp đồng mã hóa đang phát triển nhanh
+                                        chóng</p>
+                                </div>
+                            </div>
+                            <div class="row news-item">
+                                <div class="col-4 news-item-img">
+                                    <a href="#">
+                                        <img src="../images/coin.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="col-8 news-item-info">
+                                    <a href="#">Tiêu đề</a>
+                                    <p>Ancient8 tự hào là đơn vị tổ chức giải đấu Axie Infility VN
+                                        Championship</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ltc-tv">
+                <div class="container">
+                    <div class=" title bg m-t-4">
+                        <p>LTC TV </p>
+                    </div>
+                    <div class="row ltc-tv-main">
+                        <div class=" ltc-tv-main-left col-xl-8 col-lg-8 col-md-12 col-12 h-100 " style="padding-right: 2.5rem;">
+                            <div class="new-post-left w-100 news-same">
+                                <div class="new-post-left_img news-same-img">
+                                    <a href="#">
+                                        <img src="../images/coin.jpg" alt="" style="width: 100%;">
+                                    </a>
+                                </div>
+                                <div class="new-post-left_info w-100 news-same-info">
+                                    <a href="#">Quỹ ETF Bitcoin đầu tiên tại Mỹ sẽ niêm yết. Sàn chứng khoán New
+                                        York</a>
+                                    <span></span>
+                                    <div class="icon  d-flex align-items-center news-same-icon mt-3"
+                                        style="width: 1.2rem;">
+                                        <img src="../images/credit-card.png" alt="" class="w-100 mr-2">
+                                        <span>00/00/2021</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" ltc-tv-main-right col-xl-4 col-lg-4 col-md-12 col-12 h-100 pl-0">
+                            <div class=" new-post-right ">
+                                <div class=" d-flex justify-content-between flex-column h-100 w-100">
+                                    <div class="col-12 new-post-right_item d-flex pt-0">
+                                        <div class=" col-6 new-post-right_item__img">
+                                            <a href="#">
+                                                <img src="../images/coin.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class=" col-6 new-post-right_item__info pr-0">
+                                            <p>Tiêu đề</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 new-post-right_item d-flex">
+                                        <div class="col-6 new-post-right_item__img ">
+                                            <a href="#">
+                                                <img src="../images/coin.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-6 new-post-right_item__info pr-0">
+                                            <p>Tiêu đề
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 new-post-right_item d-flex">
+                                        <div class="col-6 new-post-right_item__img ">
+                                            <a href="#">
+                                                <img src="../images/coin.jpg" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="col-6 new-post-right_item__info pr-0">
+                                            <p>Tiêu đề
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="knowledge">
+                <div class="container">
+                    <div class=" title bg m-t-4">
+                        <p>Kiến thức </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-12 knowledge-list-item ">
+                            <div class="row m-0">
+                                <div class=" col-12 title  mb-3 bd-1">
+                                    <p>Kiến thức Crypto </p>
+                                </div>
+                                <div class="col-12 knowledge-item d-flex ">
+                                    <div class="col-6 knowledge-item-img p-0">
+                                        <a href="#">
+                                            <img src="../images/coin.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 knowledge-item-content">
+                                        <a href="#">Báo cáo Thị trường Tiền mã hóa Quý 3/2021 - Kyros Ventures </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 knowledge-item d-flex ">
+                                    <div class="col-6 knowledge-item-img p-0">
+                                        <a href="#">
+                                            <img src="../images/coin.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 knowledge-item-content">
+                                        <a href="#">Báo cáo Thị trường Tiền mã hóa Quý 3/2021 - Kyros Ventures </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 knowledge-item d-flex ">
+                                    <div class="col-6 knowledge-item-img p-0">
+                                        <a href="#">
+                                            <img src="../images/coin.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 knowledge-item-content">
+                                        <a href="#">Báo cáo Thị trường Tiền mã hóa Quý 3/2021 - Kyros Ventures </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-12 knowledge-list-item ">
+                            <div class="row m-0">
+                                <div class=" col-12 title  mb-3 bd-1">
+                                    <p>Kiến thức Crypto </p>
+                                </div>
+                                <div class="col-12 knowledge-item d-flex ">
+                                    <div class="col-6 knowledge-item-img p-0">
+                                        <a href="#">
+                                            <img src="../images/coin.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 knowledge-item-content">
+                                        <a href="#">Báo cáo Thị trường Tiền mã hóa Quý 3/2021 - Kyros Ventures </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 knowledge-item d-flex ">
+                                    <div class="col-6 knowledge-item-img p-0">
+                                        <a href="#">
+                                            <img src="../images/coin.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 knowledge-item-content">
+                                        <a href="#">Báo cáo Thị trường Tiền mã hóa Quý 3/2021 - Kyros Ventures </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 knowledge-item d-flex ">
+                                    <div class="col-6 knowledge-item-img p-0">
+                                        <a href="#">
+                                            <img src="../images/coin.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 knowledge-item-content">
+                                        <a href="#">Báo cáo Thị trường Tiền mã hóa Quý 3/2021 - Kyros Ventures </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-12 col-12 knowledge-list-item ">
+                            <div class="row m-0">
+                                <div class=" col-12 title  mb-3 bd-1">
+                                    <p>Kiến thức Crypto </p>
+                                </div>
+                                <div class="col-12 knowledge-item d-flex ">
+                                    <div class="col-6 knowledge-item-img p-0">
+                                        <a href="#">
+                                            <img src="../images/coin.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 knowledge-item-content">
+                                        <a href="#">Báo cáo Thị trường Tiền mã hóa Quý 3/2021 - Kyros Ventures </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 knowledge-item d-flex ">
+                                    <div class="col-6 knowledge-item-img p-0">
+                                        <a href="#">
+                                            <img src="../images/coin.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 knowledge-item-content">
+                                        <a href="#">Báo cáo Thị trường Tiền mã hóa Quý 3/2021 - Kyros Ventures </a>
+                                    </div>
+                                </div>
+                                <div class="col-12 knowledge-item d-flex ">
+                                    <div class="col-6 knowledge-item-img p-0">
+                                        <a href="#">
+                                            <img src="../images/coin.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-6 knowledge-item-content">
+                                        <a href="#">Báo cáo Thị trường Tiền mã hóa Quý 3/2021 - Kyros Ventures </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+<!--        </div>-->
+    </section>
+    <footer class="w-100">
+        <div class="container">
+            <div class="row d-flex  align-items-start">
+                <div class="col-12 col-md-4 logo-footer pl-0">
+                    <img src="../images/Artboard 2 copy.png" alt="">
+                </div>
+                <div class="col-12 col-md-4  title-footer ">
+                    <p>Trang web LTCrypto.com được ra đời nhằm cung cấp cho traders những thông tin chính xác, những
+                        kiến thức hữu ích về thị trường tiền mã hóa. Có thể nói LCrypto là cổng thông tin do người Việt
+                        Nam phát triển và dành riêng cho người Việt Nam. Tất cả nội dung liên quan đến công nghệ
+                        Blockchain hay Cryptocurrency đều sẽ được tìm thấy tại LTCrypto.</p>
+                </div>
+                <div class="col-12 col-md-4 link-footer d-flex  flex-column align-items-center ">
+                    <p>Liên hệ với LTC</p>
+                    <div class="list-icon d-flex align-items-center ">
+                        <img src="../images/facebook (2).png" alt="">
+                        <img src="../images/telegram.png" alt="">
+                        <img src="../images/Group 567.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="message">
+        <div class="icon d-flex flex-column">
+            <img src="../images/zalo.png" alt="">
+            <img src="../images/Group 567.png" alt="" id="message">
+        </div>
+        <div class="box-message ">
+            <div class="d-flex justify-content-between flex-column h-100 w-100">
+                <p class="p-3">Chat với hỗ trợ</p>
+                <div class="box-message-content"></div>
+                <div class="box-message-input d-flex justify-content-between p-3">
+                    <input type="text" placeholder="Viết tin nhắn...">
+                    <img src="../images/send.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-menu">
+        <div class="mb-menu-logo">
+            <img src="../images/Artboard 2 copy.png" alt="">
+        </div>
+        <svg   xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+            <path fill-rule="evenodd"
+                d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+        </svg>
+        <ul class="">
+            <li><a href="Ve-LTC.html">Về LTC</a></li>
+            <li><a href="Tin-tuc.html">Tin tức</a></li>
+            <li><a href="Noi-bat.html">Nổi bật</a></li>
+            <li><a href="Kien-thuc.html">Kiến thức</a></li>
+            <li><a href="OTC.html">OTC</a></li>
+        </ul>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script>
+    $().ready(function () {
+        $('.search-icon').click(function () {
+            $('.search-input').toggleClass('d-block');
+        })
+        $('#message').click(function () {
+            $('.box-message').toggleClass('d-block');
+        });
+        $('.mb-menu-icon').click(function(){
+            $('.mb-menu').show();
+        });
+        $('.mb-menu svg').click(function(){
+            $('.mb-menu').hide();
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            headerToolbar: {
+                left: '',
+                center: 'title',
+                right: ''
+            },
+            locale: 'vi',
+            eventSources: [
+                {
+                    url: '../js/calendar-data.json',
+                    type: 'GET',
+                    data: {
+
+                    },
+                    error: function () {
+                        alert('there was an error while fetching shedule!');
+                    },
+                }
+            ]
+        });
+        calendar.render();
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+:root{
+    --primaryColor :#FFED8D;
+    --green: #24B411;
+    --red : #B41111;
+}
+
+:root {
+    --px90: 5.625rem;
+    --px65: 4.0625rem;
+    --px58: 3.625rem;
+    --px54: 3.375rem;
+    --px50: 3.125rem;
+    --px45: 2.8125rem;
+    --px40: 2.5rem;
+    --px35: 2.1875rem;
+    --px32: 2rem;
+    --px30: 1.875rem;
+    --px28: 1.75rem;
+    --px25: 1.5625rem;
+    --px24: 1.5rem;
+    --px23: 1.4375rem;
+    --px21: 1.3125rem;
+    --px20: 1.25rem;
+    --px18: 1.125rem;
+    --px17: 1.0625rem;
+    --px16: 1rem;
+    --px15: 0.9375rem;
+    --px12: 0.85rem;
+    --px11:0.7rem;
+    --px10: 0.625rem;
+    --px9: 0.5rem;
+    --px6: 0.375rem;
+    --px5: 0.3125rem;
+    --px3: 0.0078125rem;
+}
+.m-t-25{
+    margin-top: 2.5rem;
+}
+.m-b-5{
+    margin-bottom: 5rem;
+}
+.mb-8{
+    margin-bottom: 8rem;
+}
+.p-r-5{
+    padding-right: 5rem;
+}
